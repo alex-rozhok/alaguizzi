@@ -1,0 +1,600 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.2; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "Tusker Grotesk 3700";
+  src: url("../fonts/TuskerGrotesk-3700Bold.eot");
+  src: url("../fonts/TuskerGrotesk-3700Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/TuskerGrotesk-3700Bold.woff2") format("woff2"), url("../fonts/TuskerGrotesk-3700Bold.woff") format("woff"), url("../fonts/TuskerGrotesk-3700Bold.ttf") format("truetype"), url("../fonts/TuskerGrotesk-3700Bold.svg#TuskerGrotesk-3700Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Tusker Grotesk 4500";
+  src: url("../fonts/TuskerGrotesk-4500Medium.eot");
+  src: url("../fonts/TuskerGrotesk-4500Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/TuskerGrotesk-4500Medium.woff2") format("woff2"), url("../fonts/TuskerGrotesk-4500Medium.woff") format("woff"), url("../fonts/TuskerGrotesk-4500Medium.ttf") format("truetype"), url("../fonts/TuskerGrotesk-4500Medium.svg#TuskerGrotesk-4500Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+html {
+  scroll-behavior: smooth; }
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative; }
+
+img {
+  width: 100%;
+  height: auto;
+  max-height: 100%; }
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+a:focus,
+button:focus {
+  outline: transparent; }
+
+a:hover,
+button:hover {
+  cursor: pointer;
+  opacity: 0.8; }
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; }
+  @media screen and (min-width: 768px) {
+    .container {
+      padding: 0 40px; } }
+
+.history-container {
+  padding-left: 35px;
+  padding-right: 35px; }
+  @media screen and (min-width: 992px) {
+    .history-container {
+      padding-left: 45px;
+      padding-right: 45px; } }
+  @media screen and (min-width: 1400px) {
+    .history-container {
+      padding-left: 90px;
+      padding-right: 90px; } }
+
+.w-100 {
+  width: 100%; }
+
+.color-white,
+.color-white a {
+  color: #fff; }
+
+.color-black {
+  color: #000; }
+
+.z-small,
+.z-medium,
+.z-large {
+  position: relative; }
+
+.z-small {
+  z-index: 3; }
+
+.z-medium {
+  z-index: 5; }
+
+.z-large {
+  z-index: 7; }
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .d-flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  @media screen and (min-width: 992px) {
+    .d-flex-desktop {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.justify-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.justify-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.align-middle {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.align-top {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.align-bottom {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto; }
+
+.preload {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ccc;
+  z-index: 20; }
+  .preload-hidden {
+    overflow: hidden; }
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding-top: 30px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%; }
+  @media screen and (min-width: 992px) {
+    .header {
+      padding-top: 70px; } }
+
+.menu-toggle {
+  position: relative;
+  display: block;
+  width: 37px;
+  height: 28px;
+  -webkit-transition: .5s;
+  transition: .5s; }
+  .menu-toggle-active {
+    opacity: 0.3; }
+
+.logo {
+  width: 150px; }
+  @media screen and (min-width: 768px) {
+    .logo {
+      width: 200px; } }
+
+.menu-toggle span,
+.menu-toggle:before,
+.menu-toggle:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  left: 0;
+  border-radius: 2px; }
+
+.menu-toggle:before {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.menu-toggle:after {
+  bottom: 0; }
+
+.menu {
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  padding-left: 20px;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out; }
+  @media screen and (min-width: 576px) {
+    .menu {
+      width: 45%; } }
+  @media screen and (min-width: 992px) {
+    .menu {
+      padding-left: 40px; } }
+  .menu:not(.show-menu) {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  .menu__list {
+    height: 60%;
+    max-height: 700px; }
+  .menu__link {
+    font-size: 18px;
+    font-family: "Tusker Grotesk 3700";
+    letter-spacing: 3px; }
+    @media screen and (min-width: 576px) {
+      .menu__link {
+        font-size: 25px; } }
+    @media screen and (min-width: 768px) {
+      .menu__link {
+        font-size: 36px; } }
+
+.banner {
+  position: relative;
+  background-position: 50%;
+  background-size: cover;
+  min-height: 100vh; }
+  .banner-overlay:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0; }
+  .banner-container {
+    height: 325px;
+    min-height: 100vh;
+    padding-top: 90px;
+    padding-bottom: 40px; }
+    @media screen and (min-width: 768px) {
+      .banner-container {
+        padding-top: 110px; } }
+    @media screen and (min-width: 992px) {
+      .banner-container {
+        padding-top: 150px; } }
+    .banner-container.before:before {
+      content: ""; }
+  .banner__home-page {
+    background-image: url(../images/home/homepage1.jpg); }
+  .banner__product-page {
+    background-image: url(../images/product/product-cover.jpg); }
+  .banner-pozzo {
+    background-image: url(../images/product/product-PARAGRAFO-1.jpg); }
+  .banner-passaggio {
+    background-image: url(../images/product/product-PARAGRAFO-2.jpg); }
+  .banner-attrezzature {
+    background-image: url(../images/product/product-PARAGRAFO-3.jpg); }
+  .banner-riparazioni {
+    background-image: url(../images/product/product-PARAGRAFO-4.jpg); }
+  .banner__trade-page {
+    background-image: url(../images/trade/trade-cover.jpg); }
+  .banner-corrosion {
+    background-image: url(../images/trade/trade-corrosione1.jpg); }
+  .banner-temperature {
+    background-image: url(../images/trade/trade-corrosione2.jpg); }
+  .banner-duplex {
+    background-image: url(../images/trade/trade-corrosione3.jpg); }
+
+.footer {
+  padding: 50px 0 70px;
+  background: #000; }
+  @media screen and (min-width: 992px) {
+    .footer {
+      padding: 100px 0 200px; } }
+
+@media screen and (min-width: 992px) {
+  .contacts {
+    padding-left: 10%; } }
+
+.contacts__list {
+  margin-top: 30px; }
+
+.fax {
+  margin: 40px 0; }
+
+.title {
+  font-family: "Tusker Grotesk 3700";
+  letter-spacing: 5px; }
+  .title-small {
+    font-size: 35px;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .title-small {
+        font-size: 50px; } }
+    @media screen and (min-width: 992px) {
+      .title-small {
+        text-align: right;
+        font-size: 60px;
+        width: 30%; } }
+  .title-large {
+    font-size: 40px; }
+    @media screen and (min-width: 576px) {
+      .title-large {
+        font-size: 60px; } }
+    @media screen and (min-width: 768px) {
+      .title-large {
+        font-size: 80px; } }
+    @media screen and (min-width: 1400px) {
+      .title-large {
+        font-size: 100px; } }
+  .title-xlarge {
+    font-size: 70px;
+    text-align: center; }
+    @media screen and (min-width: 576px) {
+      .title-xlarge {
+        font-size: 120px; } }
+    @media screen and (min-width: 768px) {
+      .title-xlarge {
+        font-size: 180px; } }
+    @media screen and (min-width: 992px) {
+      .title-xlarge {
+        font-size: 200px;
+        line-height: 1; } }
+    @media screen and (min-width: 1400px) {
+      .title-xlarge {
+        font-size: 280px; } }
+  @media screen and (min-width: 992px) {
+    .title-left {
+      width: 60%; } }
+  .title-align-left {
+    text-align: left; }
+  .title-align-right {
+    text-align: right; }
+
+.subtitle {
+  font-family: "Tusker Grotesk 4500";
+  font-size: 20px; }
+  @media screen and (min-width: 576px) {
+    .subtitle-large {
+      font-size: 35px; } }
+  @media screen and (min-width: 768px) {
+    .subtitle-large {
+      font-size: 40px; } }
+  @media screen and (min-width: 1400px) {
+    .subtitle-large {
+      font-size: 50px; } }
+  @media screen and (min-width: 992px) {
+    .subtitle-small {
+      font-size: 25px; } }
+
+.ce-icon {
+  display: block;
+  width: 100px;
+  margin: auto; }
+  @media screen and (min-width: 992px) {
+    .ce-icon {
+      width: 150px;
+      margin: 0 0 0 auto; } }
+
+.about {
+  padding: 30px 0 40px; }
+  @media screen and (min-width: 992px) {
+    .about {
+      padding: 50px 0 80px; } }
+
+.right-block {
+  text-align: center; }
+  @media screen and (min-width: 992px) {
+    .right-block {
+      text-align: left;
+      width: 65%;
+      padding-right: 10%;
+      margin-left: auto; } }
+
+.content-mb {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 576px) {
+    .content-mb {
+      margin-bottom: 30px; } }
+  @media screen and (min-width: 992px) {
+    .content-mb {
+      margin-bottom: 70px; } }
+  @media screen and (min-width: 1200px) {
+    .content-mb {
+      margin-bottom: 100px; } }
+
+.content .text:not(:last-child) {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 992px) {
+    .content .text:not(:last-child) {
+      margin-bottom: 30px; } }
+  @media screen and (min-width: 1200px) {
+    .content .text:not(:last-child) {
+      margin-bottom: 40px; } }
+
+.content__list {
+  padding-left: 15px; }
+
+.text {
+  font-family: "Saira Semi Condensed", sans-serif; }
+  .text-large {
+    font-size: 18px; }
+    @media screen and (min-width: 768px) {
+      .text-large {
+        font-size: 24px; } }
+  .text-small {
+    font-size: 16px; }
+    @media screen and (min-width: 768px) {
+      .text-small {
+        font-size: 20px; } }
+  .text-light {
+    font-weight: 300; }
+  .text-align-center {
+    text-align: center; }
+
+.product__detail {
+  text-align: center; }
+
+.product__icon {
+  width: 60px;
+  margin-bottom: 15px; }
+
+.product__link {
+  margin-top: 20px; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10; }
+  .modal:not(.show-modal) {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%); }
+
+.slider-wrapper {
+  width: 80%;
+  width: 80vw;
+  position: relative; }
+  @media screen and (min-width: 992px) {
+    .slider-wrapper {
+      width: 50vw; } }
+
+.close-modal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../images/close.png) 50%;
+  top: 5px;
+  right: 5px; }
+  @media screen and (min-width: 576px) {
+    .close-modal {
+      width: 25px;
+      height: 25px;
+      top: 10px;
+      right: 10px; } }
+  @media screen and (min-width: 992px) {
+    .close-modal {
+      width: 37px;
+      height: 37px;
+      top: 15px;
+      right: 15px; } }
+
+.close-modal,
+.slick-prev,
+.slick-next {
+  opacity: 0.6; }
+
+.slick-prev,
+.slick-next {
+  width: 22px;
+  height: 42px;
+  z-index: 3; }
+
+.slick-prev {
+  left: 10px;
+  background: url(../images/left-arrow.png) 50%/cover; }
+
+.slick-next {
+  right: 10px;
+  background: url(../images/right-arrow.png) 50%/cover; }
+
+.history-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.history-slider .slide__item {
+  background-position: 50%;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+  .history-slider .slide__item-1 {
+    background-image: url(../images/history/history-1.jpg); }
+  .history-slider .slide__item-2 {
+    background-image: url(../images/history/history-3.jpg); }
+  .history-slider .slide__item-3 {
+    background-image: url(../images/history/history-4.jpg); }
+  .history-slider .slide__item-4 {
+    background-image: url(../images/history/history-5.jpg); }
+  .history-slider .slide__item-5 {
+    background-image: url(../images/history/history-6.jpg); }
+  .history-slider .slide__item-6 {
+    background-image: url(../images/history/history-7.jpg); }
+  .history-slider .slide__item-7 {
+    background-image: url(../images/history/history-9.jpg); }
+
+@media screen and (min-width: 992px) {
+  .history-slider .slick-prev,
+  .history-slider .slick-next {
+    width: 33px;
+    height: 64px; } }
+
+@media screen and (min-width: 1400px) {
+  .history-slider .slick-prev,
+  .history-slider .slick-next {
+    width: 44px;
+    height: 84px; }
+  .history-slider .slick-prev {
+    left: 50%;
+    -webkit-transform: translateX(-680px);
+            transform: translateX(-680px); }
+  .history-slider .slick-next {
+    right: 50%;
+    -webkit-transform: translateX(680px);
+            transform: translateX(680px); } }
